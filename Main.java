@@ -31,14 +31,17 @@ class Main {
         } 
       } //6. End loop
       //7.Display results
+//this output = happens once and sets up the intitial sentance that only appears once in the output
+String output = " ";
+output = "Group name:   " + groupName + "\n" + "number in group:  " + numInGroup + "\n" ;
+//loop before the start of putting the ouptu together
+ for(int amountDisplayed = 0; amountDisplayed < numInGroup; amountDisplayed ++){
 
-      //display resuls needs to be in a loop to go through the names and ticket cost arrays (your output = statement is fine it just needs a loop)
-
-      output = output + "Group name:   " + groupName + "\n" + "number in group:  " + numInGroup + "\n" + "Student Names     Ticket Price" + "\n" + for(int amountDisplayed = 0; amountDisplayed < numInGroup; amountDisplayed ++){
-        Screen.display(names[index] + ticketcost[index]);
-
-      }
-      Screen.Display(output, "dance ticket cost"); 
+      output = output + names[amountDisplayed] + ticketCost[amountDisplayed] + "\n" ;
+// the names and ticket cost are coming from arrays so they get there values one after the other, as this is in the loop you remove the part you only want to appear once from the loop - the group name and the number in the group
+  }//end loop after
+      
+      Screen.display(output, "dance ticket cost"); 
 }
    
 
